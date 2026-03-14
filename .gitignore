@@ -15,4 +15,6 @@ node_modules/
 # wrangler.toml contains sensitive config, use wrangler.toml.example for reference
 wrangler.toml
 .git-backup/
+.yarn/install-state.gz
+README.md.bak
 
