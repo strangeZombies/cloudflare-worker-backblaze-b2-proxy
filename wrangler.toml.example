@@ -1,0 +1,78 @@
+name = "cloudflare-b2-proxy"
+
+workers_dev = true
+compatibility_date = "2025-01-01"
+compatibility_flags = [ "nodejs_compat" ]
+
+main = "src/index.ts"
+
+[vars]
+# ============================================
+# Backblaze B2 Configuration (Required)
+# ============================================
+# B2 Endpoint (e.g., s3.us-east-005.backblazeb2.com)
+B2_ENDPOINT = "<your-b2-endpoint>"
+# B2 Application Key ID
+B2_APPLICATION_KEY_ID = "<your-key-id>"
+# B2 Application Key (secret)
+B2_APPLICATION_KEY = "<your-application-key>"
+# Bucket name (optional: $path, $host, or specific bucket name)
+BUCKET_NAME = "<your-bucket-name>"
+
+# ============================================
+# CORS Configuration
+# ============================================
+# Allowed origins (comma-separated, supports wildcard *)
+CORS_ALLOWED_ORIGINS = "<your-allowed-origins>"
+
+# ============================================
+# Feature Flags
+# ============================================
+# Allow listing bucket contents
+ALLOW_LIST_BUCKET = "false"
+# Use Rclone download mode
+RCLONE_DOWNLOAD = "false"
+
+# ============================================
+# Cache Configuration
+# ============================================
+# Enable cache (true/false)
+CACHE_ENABLED = "true"
+# Cache time in seconds
+CACHE_TTL = "3600"
+# Hot files list (comma-separated), cached for 24 hours
+HOT_FILES = ""
+
+# ============================================
+# Rate Limiting Configuration
+# ============================================
+# Enable rate limiting (true/false)
+RATE_LIMIT_ENABLED = "true"
+# Requests per time window
+RATE_LIMIT_REQUESTS = "100"
+# Time window size in seconds
+RATE_LIMIT_WINDOW = "60"
+
+# ============================================
+# Anti-Hotlinking Configuration
+# ============================================
+# Enable anti-hotlinking (true/false)
+ANTI_SCAN_ENABLED = "true"
+# Allowed domains (comma-separated, supports wildcard *)
+ALLOWED_DOMAINS = "<your-domain>,localhost"
+# Blocked referrers (comma-separated)
+BLOCKED_REFERRERS = ""
+# Allowed referrers (comma-separated)
+ALLOWED_REFERRERS = ""
+# Own domains (comma-separated, supports wildcard *)
+OWN_DOMAINS = "<your-domain>,localhost"
+# Allow empty Referer header (true/false)
+ALLOW_EMPTY_REFERER = "true"
+
+# ============================================
+# Signed Download Configuration
+# ============================================
+# CDN signing secret (for generating signed download links)
+# To enable: set a complex random string
+# To disable: leave empty
+CDN_SIGNING_SECRET = ""

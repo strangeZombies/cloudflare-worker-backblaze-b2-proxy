@@ -1,0 +1,18 @@
+/target
+/dist
+**/*.rs.bk
+Cargo.lock
+bin/
+pkg/
+wasm-pack.log
+worker/
+node_modules/
+.cargo-ok
+.env
+.idea/
+.dev.vars
+.wrangler/
+# wrangler.toml contains sensitive config, use wrangler.toml.example for reference
+wrangler.toml
+.git-backup/
+

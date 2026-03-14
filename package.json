@@ -1,0 +1,35 @@
+{
+  "name": "cloudflare-worker-b2-proxy",
+  "packageManager": "yarn@4.11.0",
+  "version": "1.0.0",
+  "description": "High-performance Cloudflare Worker proxy for Backblaze B2 with CORS, Cache, Rate Limiting, and Anti-Hotlinking",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler publish",
+    "lint": "eslint . --ext .ts,.js",
+    "build": "tsc"
+  },
+  "keywords": [
+    "cloudflare-worker",
+    "backblaze-b2",
+    "proxy",
+    "s3",
+    "streaming",
+    "cache",
+    "rate-limiting",
+    "anti-hotlinking"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@clerk/backend": "^0.40.0",
+    "aws4fetch": "^1.0.20"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "@types/node": "^20.4.2",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.10.0"
+  }
+}

@@ -1,0 +1,67 @@
+# ============================================
+# Backblaze B2 配置 (必填)
+# ============================================
+# B2 端点
+B2_ENDPOINT = "s3.us-east-005.backblazeb2.com"
+# B2 密钥 ID
+B2_APPLICATION_KEY_ID = "0054bcb5149cf190000000004"
+# B2 应用密钥 (必填)
+B2_APPLICATION_KEY = "<your b2 application key>"
+# 存储桶名称
+BUCKET_NAME = "kioihyma-com"
+
+# ============================================
+# CORS 跨域配置
+# ============================================
+# 允许的来源域名 (逗号分隔，支持通配符 *)
+CORS_ALLOWED_ORIGINS = "*.kioihyma.com,localhost:3000,localhost:8787"
+
+# ============================================
+# 功能开关
+# ============================================
+# 是否允许列出存储桶内容
+ALLOW_LIST_BUCKET = "false"
+# 是否使用 Rclone 模式
+RCLONE_DOWNLOAD = "false"
+
+# ============================================
+# 缓存配置
+# ============================================
+# 启用缓存 (true/false)
+CACHE_ENABLED = "true"
+# 缓存时间 (秒)
+CACHE_TTL = "3600"
+# 热门文件列表 (逗号分隔)
+HOT_FILES = ""
+
+# ============================================
+# 速率限制配置
+# ============================================
+# 启用速率限制 (true/false)
+RATE_LIMIT_ENABLED = "true"
+# 每时间窗口允许的请求数
+RATE_LIMIT_REQUESTS = "100"
+# 时间窗口大小 (秒)
+RATE_LIMIT_WINDOW = "60"
+
+# ============================================
+# 防盗链配置
+# ============================================
+# 启用防盗链 (true/false)
+ANTI_SCAN_ENABLED = "true"
+# 允许访问的域名列表 (逗号分隔，支持通配符 *)
+ALLOWED_DOMAINS = "*.kioihyma.com,localhost"
+# 阻止的来源域名 (逗号分隔)
+BLOCKED_REFERRERS = ""
+# 允许的 Referer (逗号分隔)
+ALLOWED_REFERRERS = ""
+# 自己的域名列表 (逗号分隔，支持通配符 *)
+OWN_DOMAINS = "*.kioihyma.com,localhost"
+# 是否允许空的 Referer 头 (true/false)
+ALLOW_EMPTY_REFERER = "true"
+
+# ============================================
+# 签名下载配置
+# ============================================
+# CDN 签名密钥
+CDN_SIGNING_SECRET = ""
